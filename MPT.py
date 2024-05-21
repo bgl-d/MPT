@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 stocks = ['AMZN','TSLA','META']
-data = yf.download(stocks, start = '2024-02-01')['Close']
+data = yf.download(stocks, start = '2024-01-01')['Close']
 data.sort_index(inplace=True)
 # convert daily stock prices into daily returns
 returns = data.pct_change()
